@@ -12,7 +12,7 @@
 					position: 'absolute',
 					top: '0px',
 					left: '0px',
-					background: this.slider[this.options.direction == 'left' ? 'image1' : 'image2'].css('background-image')	
+					'background-image': this.slider[this.options.direction == 'left' ? 'image1' : 'image2'].css('background-image')
 				}).css3({
 					'backface-visibility': 'hidden'
 				}),
@@ -23,7 +23,7 @@
 					position: 'absolute',
 					top: '0px',
 					left: width+'px',
-					background: this.slider[this.options.direction == 'left' ? 'image2' : 'image1'].css('background-image')
+					'background-image': this.slider[this.options.direction == 'left' ? 'image2' : 'image1'].css('background-image')
 				}).css3({
 					'backface-visibility': 'hidden'
 				});
@@ -54,13 +54,13 @@
 				this.slideContainer.transitionEnd(function(){
 					_this.finished();
 				});
-				
+
 				setTimeout(function(){
 					_this.slideContainer.css3({
 						'transform' : flux.browser.translate(delta)
 					});
 				}, 50);
 			}
-		}, opts));	
+		}, opts));
 	};
 })(window.jQuery || window.Zepto);

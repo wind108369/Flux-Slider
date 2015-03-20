@@ -36,7 +36,7 @@
 				};
 
 				var currentFace = $('<div class="face current"></div>').css($.extend(css, {
-					background: this.slider.image1.css('background-image')
+					'background-image': this.slider.image1.css('background-image')
 				})).css3({
 					'backface-visibility': 'hidden'
 				});
@@ -44,7 +44,7 @@
 				this.cubeContainer.append(currentFace);
 
 				var nextFace = $('<div class="face next"></div>').css($.extend(css, {
-					background: this.slider.image2.css('background-image')
+					'background-image': this.slider.image2.css('background-image')
 				})).css3({
 					'transform' : this.options.transitionStrings.call(this, this.options.direction, 'nextFace'),
 					'backface-visibility': 'hidden'
@@ -66,7 +66,7 @@
 
 					_this.finished();
 				});
-				
+
 				setTimeout(function(){
 					_this.cubeContainer.css3({
 						'transform' : _this.options.transitionStrings.call(_this, _this.options.direction, 'container')
@@ -99,6 +99,6 @@
 
 				return (t[direction] && t[direction][elem]) ? t[direction][elem] : false;
 			}
-		}, opts));	
+		}, opts));
 	};
 })(window.jQuery || window.Zepto);
